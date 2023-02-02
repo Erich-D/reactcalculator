@@ -10,6 +10,10 @@ const buttonStyle: React.CSSProperties = {
     justifyContent: 'center'
 }
 
+const widthStyle: React.CSSProperties = {
+    width: '75px'
+}
+
 export function Calculator(){
 
     const [input,setInput] = useState({
@@ -53,7 +57,7 @@ export function Calculator(){
         let answer: number = 0;
         switch(buttonId){
             case "/":
-                if(Number(input.in1) < 1){alert("Can not divide by zero");return}
+                if(Number(input.in1) === 0){alert("Can not divide by zero");return}
                 answer = Number(inputClone.in1)/Number(inputClone.in2);
                 break;
             case "*":
@@ -85,10 +89,10 @@ export function Calculator(){
         </div>
         <p>Answer = {input.answ}</p>
         <div style={buttonStyle}>
-            <button id="/" onClick={buttonHandler}>/</button>
-            <button id="*" onClick={buttonHandler}>*</button>
-            <button id="-" onClick={buttonHandler}>-</button>
-            <button id="+" onClick={buttonHandler}>+</button>
+            <button id="/" onClick={buttonHandler} style={widthStyle}>/</button>
+            <button id="*" onClick={buttonHandler} style={widthStyle}>*</button>
+            <button id="-" onClick={buttonHandler} style={widthStyle}>-</button>
+            <button id="+" onClick={buttonHandler} style={widthStyle}>+</button>
         </div>
         <ul>
             {history.map(s => <li>{s}</li>)}
