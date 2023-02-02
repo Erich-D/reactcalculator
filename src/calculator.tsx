@@ -77,6 +77,11 @@ export function Calculator(){
         setHistory(historyClone)
     }
 
+    function clearHistory(event: React.MouseEvent<HTMLButtonElement, MouseEvent>){
+        const emptyArray: string[] = [];
+        setHistory(emptyArray);
+    }
+
     return <>
 
         <div >
@@ -94,6 +99,7 @@ export function Calculator(){
             <button id="-" onClick={buttonHandler} style={widthStyle}>-</button>
             <button id="+" onClick={buttonHandler} style={widthStyle}>+</button>
         </div>
+        {(history.length > 0) ? <button id="+" onClick={clearHistory} style={widthStyle}>Clear History</button>:<div></div>}
         <ul>
             {history.map(s => <li>{s}</li>)}
         </ul>
