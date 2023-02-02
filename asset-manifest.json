@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/reactcalculator/static/js/main.bfae2ed5.js",
+    "main.js": "/reactcalculator/static/js/main.e9973a7c.js",
     "index.html": "/reactcalculator/index.html",
-    "main.bfae2ed5.js.map": "/reactcalculator/static/js/main.bfae2ed5.js.map"
+    "main.e9973a7c.js.map": "/reactcalculator/static/js/main.e9973a7c.js.map"
   },
   "entrypoints": [
-    "static/js/main.bfae2ed5.js"
+    "static/js/main.e9973a7c.js"
   ]
 }
